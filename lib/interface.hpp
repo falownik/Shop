@@ -7,35 +7,22 @@
 class Shop
 {
     public:
-    void initialize();
+    void initialize(); // load all products from database
     void deleteProducer();
-    void printProducers();
-    void printProductsChemicals();
-    void printProductsFood();
+    void printProducers(); // print all producers
+    void printProductsChemicals(); // print products of class Chemicals
+    void printProductsFood(); // print products of class Food
     void saveAllToFile();
     void deleteFile();
-    void doShoping();
-    void sortChemicalsByPriceRising();
-    void sortChemicalsByPriceDecreasing();
-    void sortFoodByPriceRising();
-    void sortFoodByPriceDecreasing();
-    std::string getProducersName(long long int );
+    void doShoping(); // shop's operations
+    void sortChemicalsByPriceRising();       // 
+    void sortChemicalsByPriceDecreasing();   //* sorting
+    void sortFoodByPriceRising();            //
+    void sortFoodByPriceDecreasing();        //
+
+    std::string getProducersName(long long int ); //auxiliary class to conenct nip from product with producer
+    std::vector <Product> product;
     std::vector <Chemicals> chemicals;
     std::vector <Food> food;
     std::vector <Producer> producer;
-};
-
-class Interface
-{
-    public:
-    Shop shop;
-    Interface()
-    {
-        shop.initialize();
-    };
-
-    void menu();
-    void initialize();
-    void printProductsAll();
-
 };

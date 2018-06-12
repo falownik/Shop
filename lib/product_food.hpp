@@ -18,9 +18,9 @@ public:
     Food(){};
     int weight;
     Nutrients nutrients;
-    virtual void addProductConsole(){};
-    double sellProduct();
-    virtual void resuplyProduct();
+    //virtual void addProductConsole(){};
+    virtual double sellProduct();
+    virtual void resupplyProduct();
     void addProductConsoleRandom(int, std::string);
     virtual void printProduct(int, std::string);
 

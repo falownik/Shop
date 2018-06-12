@@ -17,11 +17,10 @@ public:
     long int quantityInShop;
     double price;
     Product(){};
-    virtual void initialize(){};
-    virtual void addProductConsole(){};
-    virtual void deleteProductConsole(){};
-    virtual void addProductToFile(){};
-    virtual void resuplyProduct(){};
+    //virtual void addProductConsole(){};
+    //virtual void deleteProductConsole(){};
+    virtual void resupplyProduct(){};
+    virtual double sellProduct(){};
     virtual void printProduct(){};
 };
 

@@ -9,15 +9,25 @@ double Food::sellProduct()
     int number;
     std::cout << "Ile zakupić sztuk?: " << std::endl;
     std::cin >> number;
+    if (number < 0)
+    {
+        std::cout << "błędne dane" << std::endl;
+        return 0;
+    }
     quantityInShop -= number;
     return number*price;
 }
 
-void Food::resuplyProduct()
+void Food::resupplyProduct()
 {
     int number;
     std::cout << "Ile dodać sztuk?: " << std::endl;
     std::cin >> number;
+    if (number < 0)
+    {
+        std::cout << "błędne dane" << std::endl;
+        return;
+    }
     quantityInShop += number;
 }
 
@@ -56,7 +66,7 @@ void Food::printProduct(int number, std::string producersName)
         std::cout << "                        waga: " << weight << " g" << std::endl;
         std::cout << "                        cena: " << price << " zł" << std::endl;
         std::cout << "                   producent: " << producersName << std::endl;
-        std::cout << "   liczba sztuk na magazycie: " << quantityInShop << std::endl;
+        std::cout << "   liczba sztuk na magazynie: " << quantityInShop << std::endl;
         std::cout << "                     tłuszcz: " << nutrients.fat << std::endl;
         std::cout << "                 węglowodany: " << nutrients.carbohydrates << std::endl;
         std::cout << "                      cukier: " << nutrients.sugar << std::endl;

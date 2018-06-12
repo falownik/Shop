@@ -1,4 +1,4 @@
-szampon
+﻿szampon
 500ml
 41
 8
@@ -971,5 +971,5 @@ pasta do butów
 pasta do butów
 350 ml
 442
-8
+11
 17.1

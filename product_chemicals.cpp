@@ -8,15 +8,25 @@ double Chemicals::sellProduct()
     int number;
     std::cout << "Ile zakupić sztuk?: " << std::endl;
     std::cin >> number;
+    if (number < 0)
+    {
+        std::cout << "błędne dane" << std::endl;
+        return 0;
+    }
     quantityInShop -= number;
     return number*price;
 }
 
-void Chemicals::resuplyProduct()
+void Chemicals::resupplyProduct()
 {
     int number;
     std::cout << "Ile dodać sztuk?: " << std::endl;
     std::cin >> number;
+    if (number < 0)
+    {
+        std::cout << "błędne dane" << std::endl;
+        return;
+    }
     quantityInShop += number;
 }
 
@@ -50,6 +60,6 @@ void Chemicals::printProduct(int number, std::string producersName)
         std::cout << "                    objętość: " << package << std::endl;
         std::cout << "                        cena: " << price << " zł" << std::endl;
         std::cout << "                   producent: " << producersName << std::endl;
-        std::cout << "   liczba sztuk na magazycie: " << quantityInShop << std::endl;
+        std::cout << "   liczba sztuk na magazynie: " << quantityInShop << std::endl;
         std::cout << std::endl << std::endl;
 }

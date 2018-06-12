@@ -6,7 +6,7 @@ public:
     Chemicals(){};
     virtual void initialize(){};
     double sellProduct();
-    virtual void resuplyProduct();
+    virtual void resupplyProduct();
     void addProductConsoleRandom(int, std::string);
     virtual void printProduct(int, std::string);
 };
