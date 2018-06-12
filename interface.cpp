@@ -30,9 +30,9 @@ void Shop::printProductsFood()
     }
 }
 
-void Shop::initialize()
+void Shop::initializeProducers()
 {
-    std::fstream file;
+        std::fstream file;
 
     file.open("data/producers.txt");
 
@@ -48,6 +48,9 @@ void Shop::initialize()
         std::string buff;
 
         getline(file, prod.name);
+        if (!(prod.name).compare(""))
+            return;
+
         getline(file, prod.adress);
         getline(file, prod.telephone);
         getline(file, prod.mail);
@@ -58,6 +61,11 @@ void Shop::initialize()
     }
 
     file.close();
+}
+
+void Shop::initializeChemicals()
+{
+    std::fstream file;
 
     file.open("data/product_chemicals.txt");
 
@@ -92,6 +100,11 @@ void Shop::initialize()
     }
 
     file.close();
+}
+
+void Shop::initializeFood()
+{
+        std::fstream file;
 
     file.open("data/product_food.txt");
 
@@ -145,10 +158,19 @@ void Shop::initialize()
     file.close();
 }
 
+
+
+void Shop::initialize()
+{
+    this->initializeProducers();
+    this->initializeChemicals();
+    this->initializeFood();
+}
+
 void Shop::printProducers()
 {
     producer.erase(producer.begin(), producer.end());
-    this->initialize();
+    this->initializeProducers();
     for (int i = 1; i <= producer.size(); i++)
     {
         std::cout << std::setw(3) << std::left << i << "      nazwa: " << producer[i - 1].name << std::endl;
@@ -186,7 +208,7 @@ void Shop::deleteProducer()
         return;
     }
 
-    remove("data/producers/.txt");
+    remove("data/producers.txt");
     this->saveAllToFile();
 }
 
@@ -233,7 +255,6 @@ void Shop::doShoping()
         case 1:
             do
             {
-                this->printProductsChemicals();
                 std::cout << "Wybierz 0 aby powrócić do menu" << std::endl;
                 std::cout << "jeżeli chcesz posortować rosnąco wybierz 1" << std::endl;
                 std::cout << "jeżeli chcesz posortować malejąco wybierz 2" << std::endl;
@@ -257,6 +278,7 @@ void Shop::doShoping()
                 case 3:
                     do
                     {
+                        this->printProductsChemicals();
                         std::cout << "wybierz produkt: ";
                         std::cin >> choose;
                         if (choose == 0)
@@ -279,7 +301,6 @@ void Shop::doShoping()
         case 2:
             do
             {
-                this->printProductsFood();
                 std::cout << "Wybierz 0 aby zakoczyć zakupy i wrócić do menu" << std::endl;
                 std::cout << "jeżeli chcesz posortować rosnąco wybierz 1" << std::endl;
                 std::cout << "jeżeli chcesz posortować malejąco wybierz 2" << std::endl;
@@ -303,6 +324,7 @@ void Shop::doShoping()
                 case 3:
                     do
                     {
+                        this->printProductsFood();
                         std::cout << "wybierz produkt: ";
                         std::cin >> choose;
                         if (choose == 0)
@@ -325,7 +347,7 @@ void Shop::doShoping()
             for (auto a : cart) std::cout << "nazwa: "<< a.name << std::endl <<
             "liczba sztuk: " << a.item << std:: endl <<
              "koszt: " << a.price << " zł " << std::endl << std::endl ;
-             std::cout << "całkowity koszt: " << bill << std::endl << std::endl;
+             std::cout << "całkowity koszt: " << bill << " zł" <<  std::endl << std::endl;
 
             break;
         }
@@ -333,5 +355,60 @@ void Shop::doShoping()
 
     chemicals.erase(chemicals.begin(), chemicals.end());
     producer.erase(producer.begin(), producer.end());
+    food.erase(food.begin(),food.end());
     this->initialize();
+}
+
+void Shop::resupplyProducts()
+{
+    int number;
+    int choose;
+    do
+    {
+    std::cout << "Wybierz 0 aby wrócić do menu" << std::endl;
+    std::cout << "Wybierz 1 aby uzupełnić jedzenie" << std::endl;
+    std::cout << "Wybierz 2 aby uzupełnić chemię" << std::endl;
+    std::cin >> number;
+
+    switch(number)
+    {
+        case 0:
+            ;
+            return;
+        case 1:
+            this->printProductsFood();
+            std::cout << " Wybierz który produkt uzupełnić" << std::endl;
+            std::cin >> choose;
+            if (choose == 0)
+                break;
+            food[choose - 1].resupplyProduct();
+            break;
+        case 2:
+            this->printProductsChemicals();
+            std::cout << " Wybierz który produkt uzupełnić" << std::endl;
+            std::cin >> choose;
+            if (choose == 0)
+                break;
+            chemicals[choose - 1].resupplyProduct();
+            break;
+
+    }
+    }while(number != 0);
+
+
+
+}
+
+void Shop::removeAll()
+{
+    remove("data/producers.txt");
+    remove("data/product_chemicals.txt");
+    remove("data/product_food.txt");
+}
+void Shop::save()
+{
+    for (auto obj : producer) obj.addProducerToFile();
+    for (auto obj : food) obj.addProductToFile();
+    for (auto obj : chemicals) obj.addProductToFile();
+        
 }

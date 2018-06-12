@@ -8,6 +8,7 @@ public:
     double sellProduct();
     virtual void resupplyProduct();
     void addProductConsoleRandom(int, std::string);
+    void addProductToFile();
     virtual void printProduct(int, std::string);
 };
 

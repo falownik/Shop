@@ -35,6 +35,7 @@
         "xutility": "cpp",
         "fstream": "cpp",
         "vector": "cpp",
-        "xmemory": "cpp"
+        "xmemory": "cpp",
+        "algorithm": "cpp"
     }
 }

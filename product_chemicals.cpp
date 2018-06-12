@@ -19,7 +19,7 @@ double Chemicals::sellProduct()
 
 void Chemicals::resupplyProduct()
 {
-    int number;
+    long int number;
     std::cout << "Ile dodać sztuk?: " << std::endl;
     std::cin >> number;
     if (number < 0)
@@ -27,7 +27,7 @@ void Chemicals::resupplyProduct()
         std::cout << "błędne dane" << std::endl;
         return;
     }
-    quantityInShop += number;
+    quantityInShop = quantityInShop + number;
 }
 
 void Chemicals::addProductConsoleRandom(int number, std::string nameP)
@@ -62,4 +62,23 @@ void Chemicals::printProduct(int number, std::string producersName)
         std::cout << "                   producent: " << producersName << std::endl;
         std::cout << "   liczba sztuk na magazynie: " << quantityInShop << std::endl;
         std::cout << std::endl << std::endl;
+}
+
+void Chemicals::addProductToFile()
+{
+        std::fstream file;
+    file.open("data/product_chemicals.txt", std::fstream::app);
+    if (!file)
+    {
+        std::cout << "Problem z otwarciem pliku product_chemicals.txt";
+        return;
+    }
+
+        file << name << std::endl;  //name
+        file << package << std::endl; //weight
+        file << quantityInShop << std::endl; // quantity in magazine
+        file << nip << std::endl; // producer's nip
+        file << price << std::endl; // price
+
+    file.close();
 }

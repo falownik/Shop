@@ -14,11 +14,11 @@ void Producer::addProducerToFile()
         return;
     }
     
-    file << std::endl << name << std::endl;
+    file << name << std::endl;
     file << adress << std::endl;
     file << telephone << std::endl;
     file << mail << std::endl;
-    file << nip;
+    file << nip << std::endl;
 
     file.close();
 

@@ -8,6 +8,11 @@ class Shop
 {
     public:
     void initialize(); // load all products from database
+    void initializeProducers();
+    void initializeChemicals();
+    void initializeFood();
+    void save();
+    void removeAll();
     void deleteProducer();
     void printProducers(); // print all producers
     void printProductsChemicals(); // print products of class Chemicals
@@ -18,7 +23,7 @@ class Shop
     void sortChemicalsByPriceDecreasing();   //* sorting
     void sortFoodByPriceRising();            //
     void sortFoodByPriceDecreasing();        //
-
+    void resupplyProducts();
     std::string getProducersName(long long int ); //auxiliary class to conenct nip from product with producer
     std::vector <Product> product;
     std::vector <Chemicals> chemicals;
