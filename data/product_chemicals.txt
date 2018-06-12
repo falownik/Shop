@@ -1,0 +1,975 @@
+szampon
+500ml
+41
+8
+15.1
+szampon
+500ml
+0
+10
+15.1
+szampon
+500ml
+478
+9
+13.1
+szampon
+500ml
+464
+6
+16.1
+szampon
+500ml
+281
+8
+12.1
+szampon
+500ml
+491
+6
+13.1
+szampon
+500ml
+327
+7
+12.1
+szampon
+500ml
+104
+3
+14.1
+szampon
+500ml
+292
+3
+12.1
+szampon
+500ml
+216
+9
+16.1
+szampon
+500ml
+447
+7
+12.1
+szampon
+500ml
+38
+10
+13.1
+szampon
+500ml
+167
+10
+16.1
+szampon
+500ml
+394
+4
+12.1
+szampon
+500ml
+322
+4
+14.1
+pasta do zębów
+500ml
+41
+8
+15.1
+pasta do zębów
+500ml
+0
+10
+15.1
+pasta do zębów
+500ml
+478
+9
+13.1
+pasta do zębów
+500ml
+464
+6
+16.1
+pasta do zębów
+500ml
+281
+8
+12.1
+pasta do zębów
+500ml
+491
+6
+13.1
+pasta do zębów
+500ml
+327
+7
+12.1
+pasta do zębów
+500ml
+104
+3
+14.1
+pasta do zębów
+500ml
+292
+3
+12.1
+pasta do zębów
+500ml
+216
+9
+16.1
+pasta do zębów
+500ml
+447
+7
+12.1
+pasta do zębów
+500ml
+38
+10
+13.1
+pasta do zębów
+500ml
+167
+10
+16.1
+pasta do zębów
+500ml
+394
+4
+12.1
+pasta do zębów
+500ml
+322
+4
+14.1
+płukanka
+500ml
+41
+8
+15.1
+płukanka
+500ml
+0
+10
+15.1
+płukanka
+500ml
+478
+9
+13.1
+płukanka
+500ml
+464
+6
+16.1
+płukanka
+500ml
+281
+8
+12.1
+płukanka
+500ml
+491
+6
+13.1
+płukanka
+500ml
+327
+7
+12.1
+płukanka
+500ml
+104
+3
+14.1
+płukanka
+500ml
+292
+3
+12.1
+płukanka
+500ml
+216
+9
+16.1
+płukanka
+500ml
+447
+7
+12.1
+płukanka
+500ml
+38
+10
+13.1
+płukanka
+500ml
+167
+10
+16.1
+płukanka
+500ml
+394
+4
+12.1
+płukanka
+500ml
+322
+4
+14.1
+płukanka
+500ml
+164
+2
+12.1
+płukanka
+500ml
+253
+9
+18.1
+płukanka
+500ml
+144
+3
+18.1
+płukanka
+500ml
+37
+10
+14.1
+płukanka
+500ml
+241
+10
+19.1
+płukanka
+500ml
+316
+6
+11.1
+płukanka
+500ml
+342
+9
+17.1
+płukanka
+500ml
+40
+3
+15.1
+płukanka
+500ml
+148
+7
+16.1
+płukanka
+500ml
+390
+10
+11.1
+płukanka
+500ml
+350
+7
+12.1
+płukanka
+500ml
+393
+9
+20.1
+płukanka
+500ml
+123
+5
+15.1
+płukanka
+500ml
+256
+1
+17.1
+płukanka
+500ml
+376
+2
+19.1
+płukanka
+500ml
+444
+10
+17.1
+płukanka
+500ml
+323
+8
+19.1
+płukanka
+500ml
+118
+3
+20.1
+płukanka
+500ml
+41
+4
+16.1
+płukanka
+500ml
+139
+9
+15.1
+płukanka
+500ml
+430
+8
+17.1
+płukanka
+500ml
+173
+7
+12.1
+płukanka
+500ml
+245
+5
+13.1
+płukanka
+500ml
+270
+10
+18.1
+płukanka
+500ml
+73
+8
+13.1
+płukanka
+500ml
+486
+1
+12.1
+płukanka
+500ml
+136
+6
+18.1
+płukanka
+500ml
+155
+5
+12.1
+płukanka
+500ml
+52
+1
+11.1
+płukanka
+500ml
+441
+5
+17.1
+płukanka
+500ml
+430
+8
+12.1
+płukanka
+500ml
+7
+8
+18.1
+płukanka
+500ml
+287
+4
+14.1
+płukanka
+500ml
+445
+10
+20.1
+płukanka
+500ml
+258
+2
+19.1
+płukanka
+500ml
+422
+7
+17.1
+płukanka
+500ml
+30
+4
+19.1
+płukanka
+500ml
+400
+2
+13.1
+płukanka
+500ml
+155
+1
+20.1
+płukanka
+500ml
+124
+8
+19.1
+krem pod oczy
+500ml
+41
+8
+15.1
+krem pod oczy
+500ml
+0
+10
+15.1
+krem pod oczy
+500ml
+478
+9
+13.1
+krem pod oczy
+500ml
+464
+6
+16.1
+krem pod oczy
+500ml
+281
+8
+12.1
+krem pod oczy
+7 ml
+467
+5
+11.1
+krem pod oczy
+63 ml
+224
+9
+19.1
+krem pod oczy
+14 ml
+464
+6
+16.1
+krem pod oczy
+7 ml
+327
+2
+12.1
+krem pod oczy
+35 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1
+pasta do butów
+70 ml
+467
+5
+11.1
+pasta do butów
+630 ml
+224
+9
+19.1
+pasta do butów
+140 ml
+464
+6
+16.1
+pasta do butów
+70 ml
+327
+2
+12.1
+pasta do butów
+350 ml
+442
+8
+17.1

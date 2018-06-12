@@ -1,31 +1,24 @@
-#include "producer.hpp"
+#include "interface.hpp"
 #include <fstream>
 
-Producer Producer::initialize()
-{
-    std::fstream file;
 
-    file.open("data/producers.txt");
+void Producer::addProducerToFile()
+{
+      std::ofstream file;
+    
+    file.open("data/producers.txt", std::fstream::app);
 
     if (!file)
     {
         std::cout << "Problem z otwarciem pliku producentów" << std::endl;
-        Producer producer;
-        return producer;
+        return;
     }
-
-    while (!file.eof())
-    {
-        Producer producer;
-        
-        file << producer.id;
-        getline (file, producer.name);
-        getline (file, producer.adress);
-        getline (file, producer.telephone);
-        getline (file, producer.mail);
-
-        return producer;
-    }
+    
+    file << std::endl << name << std::endl;
+    file << adress << std::endl;
+    file << telephone << std::endl;
+    file << mail << std::endl;
+    file << nip;
 
     file.close();
 
@@ -33,28 +26,28 @@ Producer Producer::initialize()
 
 void Producer::addProducerConsole()
 {
-    std::ifstream file;
-    
-    file.open("data/producers.txt");
 
-    if (!file)
-    {
-        std::cout << "Problem z otwarciem pliku producentów" << std::endl;
-        return;
-    }
+    std::cin.sync();
     std::cout << "Wpisz nazwę firmy" << std::endl;
-    std::cin >> name;
-    std::cout << "Wpisz adres firmy" << std::endl;
-    std::cin >> adress;
-    std::cout << "Wpisz telefon kontaktowy firmy" << std::endl;
-    std::cin >> telephone;
-    std::cout << "Wpisz adres email firmy" << std::endl;
-    std::cin >> mail;
-    file >> name;
-    file >> adress;
-    file >>telephone;
-    file >> mail;
+    getline(std::cin,name);
+    std::cin.sync();
 
-    file.close();
+    std::cout << "Wpisz adres firmy" << std::endl;
+    getline(std::cin,adress);
+    std::cin.sync();
+
+    std::cout << "Wpisz telefon kontaktowy firmy" << std::endl;
+    getline(std::cin,telephone);
+    std::cin.sync();
+
+    std::cout << "Wpisz adres email firmy" << std::endl;
+    getline(std::cin,mail);
+    std::cin.sync();
+
+    std::cout << "Wpisz NIP firmy" << std::endl;
+    std::cin >> nip ;
+    std::cin.sync();
+
+    this->addProducerToFile();
     
 }

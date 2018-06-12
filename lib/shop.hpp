@@ -1,3 +1,6 @@
+#ifndef SHOP_HPP
+#define SHOP_HPP
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -5,60 +8,23 @@
 
 
 
-class Nutrients
-{
-public:
-    Nutrients();
-    int fat;
-    int carbohydrates;
-    int sugar;
-    int salt;
-    int protein;
-};
-
 class Product
 {
 public:
-    int id;
-    Producer producer;
+    std::string name;
+    std::string package;
+    long long int nip;
+    long int quantityInShop;
     double price;
-    Product();
-    virtual void initialize();
-    virtual void addToFile();
-    virtual void printProduct();
-};
-
-class Food : public Product
-{
-public:
-    Food();
-    int weight;
-    Nutrients nutrients;
-
+    Product(){};
+    virtual void initialize(){};
+    virtual void addProductConsole(){};
+    virtual void deleteProductConsole(){};
+    virtual void addProductToFile(){};
+    virtual void resuplyProduct(){};
+    virtual void printProduct(){};
 };
 
 
-class Beverage : public Product
-{
-public:
-    Beverage();
-    int volume;
-    Nutrients nutrients;
-
-};
-
-class NonAlcohol : public Beverage
-{
-public:
-    NonAlcohol();
-    int abv; //< alcohol by volume
-
-};
-
-
-class Chemicals : public Product
-{
-public:
-    Chemicals();
-};
+#endif
 
