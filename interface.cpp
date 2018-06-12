@@ -4,6 +4,8 @@
 #include <cstdio>
 #include <algorithm>
 
+
+//method returning name of producer with given nip number
 std::string Shop::getProducersName(long long nip)
 {
     for (auto i = 0; i < producer.size(); i++)
@@ -12,6 +14,7 @@ std::string Shop::getProducersName(long long nip)
     return "nie znaleziono";
 }
 
+//Prints all products of class Chemicals in console
 void Shop::printProductsChemicals()
 {
     //std::cout << chemicals.size();
@@ -21,6 +24,7 @@ void Shop::printProductsChemicals()
     }
 }
 
+//Prints all products of class Food in console
 void Shop::printProductsFood()
 {
     //std::cout << chemicals.size();
@@ -30,6 +34,7 @@ void Shop::printProductsFood()
     }
 }
 
+//Copy producers from data/producers.txt to vector<>
 void Shop::initializeProducers()
 {
         std::fstream file;
@@ -63,6 +68,7 @@ void Shop::initializeProducers()
     file.close();
 }
 
+//Copy chemicals from data/Chemicals.txt to vector<>
 void Shop::initializeChemicals()
 {
     std::fstream file;
@@ -102,6 +108,7 @@ void Shop::initializeChemicals()
     file.close();
 }
 
+//Copy Food from data/food.txt to vector<>
 void Shop::initializeFood()
 {
         std::fstream file;
@@ -158,8 +165,7 @@ void Shop::initializeFood()
     file.close();
 }
 
-
-
+//Copy database to vectors<>
 void Shop::initialize()
 {
     this->initializeProducers();
@@ -167,6 +173,7 @@ void Shop::initialize()
     this->initializeFood();
 }
 
+//Method reinitializes producers from file and prints attributes
 void Shop::printProducers()
 {
     producer.erase(producer.begin(), producer.end());
@@ -183,12 +190,14 @@ void Shop::printProducers()
     }
 }
 
+//Copy producers to file data/producers.txt
 void Shop::saveAllToFile()
 {
     for (auto i = 0; i < producer.size(); i++)
         producer[i].addProducerToFile();
 }
 
+//Deletes choosen producer from vector<> and reinitializes data/producers.txt
 void Shop::deleteProducer()
 {
     std::cout << "Wybierz firme do usunięcia, jeżeli nie chcesz usuwać wybierz 0" << std::endl;
@@ -232,7 +241,8 @@ void Shop::sortFoodByPriceDecreasing()
     std::sort(food.begin(), food.end(), [](Food a, Food b) { return a.price > b.price; });
 }
 
-void Shop::doShoping()
+
+void Shop::doShopping()
 {
     double bill = 0;
     int number;
@@ -259,7 +269,7 @@ void Shop::doShoping()
                 std::cout << "jeżeli chcesz posortować rosnąco wybierz 1" << std::endl;
                 std::cout << "jeżeli chcesz posortować malejąco wybierz 2" << std::endl;
                 std::cout << "jeżeli chcesz rozpocząć zakupy wybierz 3" << std::endl;
-                std::cout << "jeżeli chcesz zakoczyći zapłacić wybierz 4" << std::endl;
+                std::cout << "jeżeli chcesz zakoczyć i zapłacić wybierz 4" << std::endl;
                 std::cout << "______________________________________" << std::endl;
                 std::cout << "wybrano produkty za: " << bill << " zł" << std::endl;
                 std::cin >> choose;
@@ -283,13 +293,16 @@ void Shop::doShoping()
                         std::cin >> choose;
                         if (choose == 0)
                             break;
-
+                        //selling product and adding it to cart
+                        //adding to cart copies name of product
+                        //number of sold products and price
                         temp_bill = chemicals[choose - 1].sellProduct();
                         car.item = temp_bill/chemicals[choose - 1].price;
                         car.name = chemicals[choose - 1].name + " " + this->getProducersName(chemicals[choose - 1].nip);
                         car.price = temp_bill;
                         cart.push_back(car);
                         bill += temp_bill;
+                        //print state of transaction
                         std::cout << "______________________________________" << std::endl;
                         std::cout << "wybrano produkty za: " << bill << " zł" << std::endl;
                     } while (choose != 0);
@@ -329,12 +342,16 @@ void Shop::doShoping()
                         std::cin >> choose;
                         if (choose == 0)
                             break;
+                        //selling product and adding it to cart
+                        //adding to cart copies name of product
+                        //number of sold products and price
                         temp_bill = food[choose - 1].sellProduct();
                         car.item = temp_bill/food[choose - 1].price;
                         car.name = food[choose - 1].name + " " + this->getProducersName(food[choose - 1].nip);
                         car.price = temp_bill;
                         cart.push_back(car);
                         bill += temp_bill;
+                        //print state of transaction
                         std::cout << "______________________________________" << std::endl;
                         std::cout << "wybrano produkty za: " << bill << " zł" << std::endl;
                     } while (choose != 0);
@@ -343,6 +360,7 @@ void Shop::doShoping()
             } while (choose != 0);
             break;
             case 3:
+            //print content of cart
             std::cout << std::endl << "zawartość koszyka" << std::endl << std::endl;
             for (auto a : cart) std::cout << "nazwa: "<< a.name << std::endl <<
             "liczba sztuk: " << a.item << std:: endl <<
@@ -352,13 +370,15 @@ void Shop::doShoping()
             break;
         }
     } while (number != 0);
-
+    //reinitialize database after transaction
     chemicals.erase(chemicals.begin(), chemicals.end());
     producer.erase(producer.begin(), producer.end());
     food.erase(food.begin(),food.end());
     this->initialize();
 }
 
+
+//
 void Shop::resupplyProducts()
 {
     int number;
@@ -379,16 +399,26 @@ void Shop::resupplyProducts()
             this->printProductsFood();
             std::cout << " Wybierz który produkt uzupełnić" << std::endl;
             std::cin >> choose;
-            if (choose == 0)
+            if (choose == 0) //leave
                 break;
+            else if (choose > food.size())//check if doesn't overflow umber of products
+            {
+                std::cout << "nie ma takiego produktu";
+                break;
+            }
             food[choose - 1].resupplyProduct();
             break;
         case 2:
             this->printProductsChemicals();
             std::cout << " Wybierz który produkt uzupełnić" << std::endl;
             std::cin >> choose;
-            if (choose == 0)
+            if (choose == 0)//leave
                 break;
+            else if (choose > chemicals.size())//check if doesn't overflow umber of products
+            {
+                std::cout << "nie ma takiego produktu";
+                break;
+            }
             chemicals[choose - 1].resupplyProduct();
             break;
 
@@ -399,12 +429,15 @@ void Shop::resupplyProducts()
 
 }
 
+//remove all files before reinitialization
 void Shop::removeAll()
 {
     remove("data/producers.txt");
     remove("data/product_chemicals.txt");
     remove("data/product_food.txt");
 }
+
+//save all vectors<> to database
 void Shop::save()
 {
     for (auto obj : producer) obj.addProducerToFile();

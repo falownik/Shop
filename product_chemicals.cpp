@@ -3,6 +3,8 @@
 #include <fstream>
 #include <iomanip>
 
+//sellProduct used to make a purchase
+//returns amount to pay
 double Chemicals::sellProduct()
 {
     int number;
@@ -22,6 +24,7 @@ double Chemicals::sellProduct()
     return number*price;
 }
 
+//resupplying products (increase number of items)
 void Chemicals::resupplyProduct()
 {
     long int number;
@@ -35,6 +38,7 @@ void Chemicals::resupplyProduct()
     quantityInShop = quantityInShop + number;
 }
 
+//adding number of random nameP products
 void Chemicals::addProductConsoleRandom(int number, std::string nameP)
 {
     std::fstream file;
@@ -57,6 +61,7 @@ void Chemicals::addProductConsoleRandom(int number, std::string nameP)
     file.close();
 }
 
+//Print product's attributes in console
 void Chemicals::printProduct(int number, std::string producersName)
 {
 
@@ -69,6 +74,7 @@ void Chemicals::printProduct(int number, std::string producersName)
         std::cout << std::endl << std::endl;
 }
 
+//append product to data/product_food.txt
 void Chemicals::addProductToFile()
 {
         std::fstream file;

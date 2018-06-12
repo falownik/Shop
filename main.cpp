@@ -24,11 +24,13 @@ int main()
         switch (number)
         {
         case 0:
+            //reinitialize database
             shop.removeAll();
             shop.save();
             return 0;
         case 1:
             prod.addProducerConsole();
+            //reinitialize vector<>
             shop.producer.erase(shop.producer.begin(),shop.producer.end());
             shop.initializeProducers();
             break;
@@ -46,17 +48,20 @@ int main()
             break;
         case 6:
             food.addProductConsole();
+            //reinitialize vector<>
             shop.food.erase(shop.food.begin(),shop.food.end());
             shop.initializeFood();
             break;
         case 8:
             shop.resupplyProducts();
+            //reinitialize database
             shop.removeAll();
             shop.save();
 
             break;
         case 9:
-            shop.doShoping();
+            shop.doShopping();
+            //reinitialize database
             shop.removeAll();
             shop.save();
             break;

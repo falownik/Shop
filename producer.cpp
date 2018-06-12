@@ -1,7 +1,7 @@
 #include "interface.hpp"
 #include <fstream>
 
-
+//add producer from instance of object
 void Producer::addProducerToFile()
 {
       std::ofstream file;
@@ -24,6 +24,7 @@ void Producer::addProducerToFile()
 
 }
 
+//add producer from console to database
 void Producer::addProducerConsole()
 {
 

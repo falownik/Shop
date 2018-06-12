@@ -4,6 +4,8 @@
 #include <iomanip>
 
 
+//sellProduct used to make a purchase
+//returns amount to pay
 double Food::sellProduct()
 {
     int number;
@@ -23,6 +25,7 @@ double Food::sellProduct()
     return number*price;
 }
 
+//resupplying products (increase number of items)
 void Food::resupplyProduct()
 {
     int number;
@@ -36,6 +39,7 @@ void Food::resupplyProduct()
     quantityInShop += number;
 }
 
+//adding number of random nameP products
 void Food::addProductConsoleRandom(int number, std::string nameP)
 {
     std::fstream file;
@@ -63,6 +67,7 @@ void Food::addProductConsoleRandom(int number, std::string nameP)
     file.close();
 }
 
+//append product to data/product_food.txt
 void Food::addProductToFile()
 {
     std::fstream file;
@@ -87,6 +92,7 @@ void Food::addProductToFile()
     file.close();
 }
 
+//Print product's attributes in console
 void Food::printProduct(int number, std::string producersName)
 {
 
@@ -104,7 +110,9 @@ void Food::printProduct(int number, std::string producersName)
         std::cout << std::endl << std::endl;
 }
 
-
+//Add new product to database
+//differs form resupplyProduct, addProductConsole creates new product,
+//resuplyProduct increase number of product's instances
 void Food::addProductConsole()
 {
     std::cin.sync();

@@ -18,7 +18,7 @@ class Shop
     void printProductsChemicals(); // print products of class Chemicals
     void printProductsFood(); // print products of class Food
     void saveAllToFile();
-    void doShoping(); // shop's operations
+    void doShopping(); // shop's operations
     void sortChemicalsByPriceRising();       // 
     void sortChemicalsByPriceDecreasing();   //* sorting
     void sortFoodByPriceRising();            //
