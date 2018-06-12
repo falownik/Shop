@@ -14,6 +14,11 @@ double Food::sellProduct()
         std::cout << "błędne dane" << std::endl;
         return 0;
     }
+    else if (number > quantityInShop)
+    {
+        std::cout << "nie ma tylu produktów" << std::endl;
+        return 0;
+    }
     quantityInShop -= number;
     return number*price;
 }
