@@ -58,6 +58,30 @@ void Food::addProductConsoleRandom(int number, std::string nameP)
     file.close();
 }
 
+void Food::addProductToFile()
+{
+    std::fstream file;
+    file.open("data/product_food.txt", std::fstream::app);
+    if (!file)
+    {
+        std::cout << "Problem z otwarciem pliku product_food.txt";
+        return;
+    }
+
+        file << name << std::endl;  //name
+        file << weight << std::endl; //weight
+        file << quantityInShop << std::endl; // quantity in magazine
+        file << nip << std::endl; // producer's nip
+        file << price << std::endl; // price
+        file << nutrients.fat << std::endl; //fat
+        file << nutrients.carbohydrates << std::endl; // carbohydrates
+        file << nutrients.sugar << std::endl; // sugar
+        file << nutrients.salt << std::endl; //salt
+        file << nutrients.protein << std::endl; //protein
+
+    file.close();
+}
+
 void Food::printProduct(int number, std::string producersName)
 {
 
@@ -75,12 +99,29 @@ void Food::printProduct(int number, std::string producersName)
         std::cout << std::endl << std::endl;
 }
 
-/*
+
 void Food::addProductConsole()
 {
     std::cin.sync();
     std::cout << "Wpisz nazwę jedzenia" << std::endl;
     getline(std::cin,name);
+    std::cin.sync();
+
+    std::cin.sync();
+    std::cout << "Opisz opakowanie: (masa/liczba sztuk)" << std::endl;
+    std::cin >> weight;
+    std::cin.sync();
+
+    std::cout << "Wpisz cenę za sztukę" << std::endl;
+    std::cin >> price;
+    std::cin.sync();
+
+    std::cout << "Wpisz nip producenta" << std::endl;
+    std::cin >> nip;
+    std::cin.sync();
+
+    std::cout << "Wpisz liczbę sztuk" << std::endl;
+    std::cin >> quantityInShop;
     std::cin.sync();
 
     std::cin.sync();
@@ -107,22 +148,5 @@ void Food::addProductConsole()
     std::cin >> nutrients.protein;
     std::cin.sync();
 
-    std::cin.sync();
-    std::cout << "Opisz opakowanie: (masa/liczba sztuk)" << std::endl;
-    getline(std::cin,package);
-    std::cin.sync();
-
-    std::cout << "Wpisz cenę za sztukę" << std::endl;
-    std::cin >> price;
-    std::cin.sync();
-
-    std::cout << "Wpisz liczbę sztuk" << std::endl;
-    std::cin >> quantityInShop;
-    std::cin.sync();
-
-    std::cout << "Wpisz nip producenta" << std::endl;
-    std::cin >> nip;
-    std::cin.sync();
-
     this->addProductToFile();
-}*/
+}

@@ -22,6 +22,17 @@ public:
     virtual double sellProduct();
     virtual void resupplyProduct();
     void addProductConsoleRandom(int, std::string);
+    void addProductToFile();
+    void addProductConsole();
     virtual void printProduct(int, std::string);
 
+};
+
+class Cart
+{
+public: 
+    Cart(){};
+    std::string name;
+    int item;
+    double price;
 };

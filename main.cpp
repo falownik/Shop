@@ -4,6 +4,7 @@ int main()
 {
     Producer prod;
     Shop shop;
+    Food food;
 
     shop.initialize();
 
@@ -16,6 +17,7 @@ int main()
         std::cout << "Wybierz 3 aby wypisać listę firm" << std::endl;
         std::cout << "Wybierz 4 aby wypisać chemię" << std::endl;
         std::cout << "Wybierz 5 aby wypisać jedzenie" << std::endl;
+        std::cout << "Wybierz 6 aby dodać dane jedzenia" << std::endl;
         std::cout << "wybierz 9 aby zrobić zakupy" << std::endl;
         std::cin >> number;
         switch (number)
@@ -36,6 +38,9 @@ int main()
             break;
         case 5: 
             shop.printProductsFood();
+            break;
+        case 6:
+            food.addProductConsole();
             break;
         case 9:
             shop.doShoping();

@@ -161,11 +161,6 @@ void Shop::printProducers()
     }
 }
 
-void Shop::deleteFile()
-{
-    remove("data/producers.txt");
-}
-
 void Shop::saveAllToFile()
 {
     for (auto i = 0; i < producer.size(); i++)
@@ -191,7 +186,7 @@ void Shop::deleteProducer()
         return;
     }
 
-    this->deleteFile();
+    remove("data/producers/.txt");
     this->saveAllToFile();
 }
 
@@ -220,12 +215,16 @@ void Shop::doShoping()
     double bill = 0;
     int number;
     int choose;
+    std::vector<Cart> cart;
+    Cart car;
+    double temp_bill = 0;
     do
     {
         long int quantity;
         std::cout << "Wybierz 0 aby powrócić do menu" << std::endl;
         std::cout << "Wybierz 1 aby zakupić chemię" << std::endl;
         std::cout << "Wybierz 2 aby zakupić jedzenie" << std::endl;
+        std::cout << "jeżeli chcesz zobaczyć zawartośc koszyka wybierz 3" << std::endl;
         std::cin >> number;
         switch (number)
         {
@@ -263,7 +262,12 @@ void Shop::doShoping()
                         if (choose == 0)
                             break;
 
-                        bill += chemicals[choose - 1].sellProduct();
+                        temp_bill = chemicals[choose - 1].sellProduct();
+                        car.item = temp_bill/chemicals[choose - 1].price;
+                        car.name = chemicals[choose - 1].name + " " + this->getProducersName(chemicals[choose - 1].nip);
+                        car.price = temp_bill;
+                        cart.push_back(car);
+                        bill += temp_bill;
                         std::cout << "______________________________________" << std::endl;
                         std::cout << "wybrano produkty za: " << bill << " zł" << std::endl;
                     } while (choose != 0);
@@ -276,11 +280,11 @@ void Shop::doShoping()
             do
             {
                 this->printProductsFood();
-                std::cout << "Wybierz 0 aby powrócić do menu" << std::endl;
+                std::cout << "Wybierz 0 aby zakoczyć zakupy i wrócić do menu" << std::endl;
                 std::cout << "jeżeli chcesz posortować rosnąco wybierz 1" << std::endl;
                 std::cout << "jeżeli chcesz posortować malejąco wybierz 2" << std::endl;
                 std::cout << "jeżeli chcesz rozpocząć zakupy wybierz 3" << std::endl;
-                std::cout << "jeżeli chcesz zakoczyći zapłacić wybierz 4" << std::endl;
+                std::cout << "jeżeli chcesz zakoczyć i zapłacić wybierz 4" << std::endl;
                 std::cout << "______________________________________" << std::endl;
                 std::cout << "wybrano produkty za: " << bill << " zł" << std::endl;
                 std::cin >> choose;
@@ -303,13 +307,26 @@ void Shop::doShoping()
                         std::cin >> choose;
                         if (choose == 0)
                             break;
-                        bill += food[choose - 1].sellProduct();
+                        temp_bill = food[choose - 1].sellProduct();
+                        car.item = temp_bill/food[choose - 1].price;
+                        car.name = food[choose - 1].name + " " + this->getProducersName(food[choose - 1].nip);
+                        car.price = temp_bill;
+                        cart.push_back(car);
+                        bill += temp_bill;
                         std::cout << "______________________________________" << std::endl;
                         std::cout << "wybrano produkty za: " << bill << " zł" << std::endl;
                     } while (choose != 0);
                     break;
                 }
             } while (choose != 0);
+            break;
+            case 3:
+            std::cout << std::endl << "zawartość koszyka" << std::endl << std::endl;
+            for (auto a : cart) std::cout << "nazwa: "<< a.name << std::endl <<
+            "liczba sztuk: " << a.item << std:: endl <<
+             "koszt: " << a.price << " zł " << std::endl << std::endl ;
+             std::cout << "całkowity koszt: " << bill << std::endl << std::endl;
+
             break;
         }
     } while (number != 0);

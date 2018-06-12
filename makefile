@@ -22,3 +22,4 @@ product_food.o: product_food.cpp
 
 clean:
 	rm -f *.o
+	rm shop.exe
