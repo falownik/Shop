@@ -88,7 +88,7 @@ void Shop::initializeChemicals()
         std::string buff;
 
         getline(file, chem.name);
-        if (!(chem.name).compare(""))
+        if (!(chem.name).compare(""))//check if there's anything to download
             break;
 
         getline(file, chem.package);
